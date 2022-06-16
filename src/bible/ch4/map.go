@@ -29,7 +29,7 @@ func MapDemo1() {
 	}
 }
 
-func Practice48CharCount() {
+func CharCount() {
 	counts := make(map[rune]int)    // counts of Unicode characters
 	var utflen [utf8.UTFMax + 1]int // count of lengths of UTF-8 encodings
 	invalid := 0                    // count of invalid UTF-8 characters
@@ -70,3 +70,11 @@ func Practice48CharCount() {
 		fmt.Printf("\n%d invalid UTF-8 characters\n", invalid)
 	}
 }
+
+//func Practice48Charcount(){
+//	counts := make(map[rune]int)    // counts of Unicode characters
+//	var utflen [utf8.UTFMax + 1]int // count of lengths of UTF-8 encodings
+//	invalid := 0                    // count of invalid UTF-8 characters
+//
+//	in := bufio.NewReader(os.Stdin)
+//}

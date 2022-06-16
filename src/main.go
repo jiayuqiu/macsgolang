@@ -1,8 +1,8 @@
 package main
 
 import (
-	"macagolang/src/bible/ch1"
-	"macagolang/src/bible/ch4"
+	"macsgolang/src/bible/ch1"
+	"macsgolang/src/bible/ch4"
 )
 
 func main() {
@@ -46,5 +46,13 @@ func main() {
 
 	// map
 	//ch4.Practice48CharCount()
-	ch4.MapDemo1()
+	//ch4.MapDemo1()
+
+	// json
+	//str := `{"page": 1, "fruits": ["apple", "peach"]}`
+	//res := ch4.TestJsonStruct{}
+	//json.Unmarshal([]byte(str), &res)
+	//fmt.Println(res)
+	//fmt.Println(res.Page)
+	ch4.Issues()
 }

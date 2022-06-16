@@ -54,5 +54,5 @@ func main() {
 	//json.Unmarshal([]byte(str), &res)
 	//fmt.Println(res)
 	//fmt.Println(res.Page)
-	ch4.Issues()
+	ch4.Practice412()
 }

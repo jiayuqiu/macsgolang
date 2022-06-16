@@ -23,7 +23,6 @@ type TestJsonStruct struct {
 }
 
 const IssuesURL = "https://api.github.com/search/issues"
-const TimeInterval = 365 * 86400
 
 type IssuesSearchResult struct {
 	TotalCount int `json:"total_count"`
@@ -69,7 +68,7 @@ func SearchIssues(terms []string) (*IssuesSearchResult, error) {
 	return &result, nil
 }
 
-func Issues() {
+func Practice410(TimeInterval int64) {
 	issuesStrings := []string{
 		"repo:golang/go is:open json decoder",
 	}

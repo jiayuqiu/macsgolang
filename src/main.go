@@ -2,7 +2,7 @@ package main
 
 import (
 	"macsgolang/src/bible/ch1"
-	"macsgolang/src/bible/ch4"
+	"macsgolang/src/bible/ch5"
 )
 
 func main() {
@@ -10,7 +10,7 @@ func main() {
 	ch1.PrintHello()
 
 	// web
-	//ch1.WebRun()
+	// ch1.FetchUrlByChan()
 
 	//flag
 	//ch2.TestFlag()
@@ -54,5 +54,8 @@ func main() {
 	//json.Unmarshal([]byte(str), &res)
 	//fmt.Println(res)
 	//fmt.Println(res.Page)
-	ch4.Practice412()
+	// ch4.Practice412()
+	ch5.Findlinks1()
+
+	// fmt.Printf("%v %T", time.Second, time.Second)
 }

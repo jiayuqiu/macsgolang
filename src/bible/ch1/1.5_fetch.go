@@ -9,7 +9,7 @@ import (
 	"time"
 )
 
-func FetchUrlBySlice(){
+func FetchUrlBySlice() {
 	var urls = [2]string{"http://gopl.io", "http://bad.gopl.io"}
 	for _, url := range urls {
 		resp, err := http.Get(url)
@@ -28,13 +28,20 @@ func FetchUrlBySlice(){
 	}
 }
 
-func FetchUrlByChan(){
-	var urls = [3]string{"http://gopl.io", "https://www.baidu.com", "https://goproxy.cn"}
+func FetchUrlByChan() {
+	var urls = []string{
+		"http://gopl.io",
+		"https://www.baidu.com",
+		"https://goproxy.cn",
+		"https://www.jd.com",
+		"https://www.taobao.com",
+		"https://www.bilibili.com/",
+	}
 	start := time.Now()
 	ch := make(chan string)
 	for _, url := range urls {
 		go fetch(url, ch) // start a goroutine
-	}  // 开启channel
+	} // 开启channel
 
 	for range urls {
 		fmt.Println(<-ch) // receive from channel ch, ch中为fetch的结果
@@ -42,7 +49,7 @@ func FetchUrlByChan(){
 	fmt.Printf("%.2fs elapsed\n", time.Since(start).Seconds())
 }
 
-func fetch(url string, ch chan <- string) {
+func fetch(url string, ch chan<- string) {
 	start := time.Now()
 	resp, err := http.Get(url)
 	if err != nil {

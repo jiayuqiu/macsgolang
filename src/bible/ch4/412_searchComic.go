@@ -48,6 +48,7 @@ func Practice412() {
 	//Write a tool xkcd that, using this index,
 	//prints the URL and transcript of each comic that matches a search term provided on the command line.
 	//TODO: 可以添加一个函数，以title作为key进行检索。
+
 	// for i := 571; i <= 575; i++ {
 	// 	result, err := searchComic(i)
 	// 	if err != nil {
@@ -92,7 +93,7 @@ func Practice412() {
 		// var res XKCDresponse
 		res := &XKCDresponse{} // 此处初始化需要用指针
 
-		err = json.Unmarshal(strBytes, res)
+		err = json.Unmarshal(strBytes, res) // 将结果放入指针
 		if err != nil {
 			fmt.Println("解析数据失败", err)
 			return
